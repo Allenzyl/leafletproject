@@ -1,0 +1,28 @@
+---
+title: "R Markdown and Leaflet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## July 17, 2018
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%   addTiles() %>%
+addMarkers(lat=38.9869, lng=-76.9426, 
+             popup="University of Maryland")
+my_map
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
